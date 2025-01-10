@@ -45,4 +45,8 @@ public class PosteMereService {
     public List<PosteFille> getPosteFilles(String idPosteMere){
         return posteFilleService.getPosteFilleByPosteMere(idPosteMere);
     }
+
+    public List<PosteMere> getPosteMeresByTypePoste(String idTypePoste){
+        return posteMereRepository.findByTypePoste(idTypePoste);
+    }
 }

@@ -1,5 +1,16 @@
 # TODO
 
+## Structuration du projet
+
+[x] generer les sequences
+[x] generer les fonctions de sequences
+[x] generer trigger
+[x] cree un script pour reinitialiser la base de donnee
+[ ] Base de donnee
+    [x] generer donnee pour typePoste
+    [x] generer donnee pour PosteMere
+    [ ] generer donnee pour PosteFille
+
 ## Bilan Formulaire
 
 [ ] Metier

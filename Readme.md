@@ -21,4 +21,4 @@ Ce projet est conçu pour établir des états financiers (état financier) basé
 
 ### Documents
 
-- liste des taches
+- liste des taches [here](https://docs.google.com/spreadsheets/d/10eusWMN2Z3np1kJ6L9S3uXCg4-1XCbxckZGSmKHY7Ss/edit?gid=0#gid=0)

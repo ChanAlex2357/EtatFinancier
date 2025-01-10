@@ -9,4 +9,8 @@ public class PosteBilan {
     private TypePoste typePoste;
     private List<PosteMere> posteMeres;
     private List<PosteFille> posteFilles;
+
+    public PosteBilan(TypePoste typePoste){
+        setTypePoste(typePoste);
+    }
 }

@@ -14,4 +14,9 @@
 ## Bilan Formulaire
 
 [ ] Metier
-    [ ]
+    [ ] CRUDS
+        [ ] PosteMere
+        [ ] PosteFille
+        [ ] TypePoste
+    [ ] fonction PosteFilleService.getPosteFilleByPosteMere ( PosteMere )
+    [ ] fonction PosteMere.getPosteFille( PosteMere )

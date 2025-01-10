@@ -1,8 +1,8 @@
-package itu.etatfinance.services;
+package itu.etatfinance.service;
 
-import itu.etatfinance.models.PosteMere;
-import itu.etatfinance.models.TypePoste;
-import itu.etatfinance.repositories.TypePosteRepository;
+import itu.etatfinance.model.PosteMere;
+import itu.etatfinance.model.TypePoste;
+import itu.etatfinance.repository.TypePosteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

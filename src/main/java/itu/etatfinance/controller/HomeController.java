@@ -1,4 +1,4 @@
-package itu.etatfinance.controllers;
+package itu.etatfinance.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

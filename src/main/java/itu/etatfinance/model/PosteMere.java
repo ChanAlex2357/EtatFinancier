@@ -1,40 +1,17 @@
-package itu.etatfinance.models;
+package itu.etatfinance.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "PosteMere")
+@Data
 public class PosteMere {
 
     @Id
     private String idPosteMere;
     private String nom;
     private String idTypePoste;
-
-    // Getters and Setters
-    public String getIdPosteMere() {
-        return idPosteMere;
-    }
-
-    public void setIdPosteMere(String idPosteMere) {
-        this.idPosteMere = idPosteMere;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getIdTypePoste() {
-        return idTypePoste;
-    }
-
-    public void setIdTypePoste(String idTypePoste) {
-        this.idTypePoste = idTypePoste;
-    }
 }

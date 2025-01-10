@@ -1,5 +1,6 @@
 package itu.etatfinance.service;
 
+import itu.etatfinance.constant.TypePosteConstante;
 import itu.etatfinance.model.PosteMere;
 import itu.etatfinance.model.TypePoste;
 import itu.etatfinance.repository.TypePosteRepository;
@@ -44,5 +45,17 @@ public class TypePosteService {
     }
     public List<PosteMere> getPosteMeres(TypePoste typePoste){
         return getPosteMeres(typePoste.getIdTypePoste());
+    }
+
+    public TypePoste getTypePosteActif(){
+        return getTypePosteById( TypePosteConstante.ID_TYPE_POSTE_ACTIF);
+    }
+
+    public TypePoste getTypePostePassifCapitaux(){
+        return getTypePosteById(TypePosteConstante.ID_TYPE_POSTE_PASSIF_ET_CAPITAUX);
+    }
+
+    public TypePoste getTypePosteResultat(){
+        return getTypePosteById(TypePosteConstante.ID_TYPE_POSTE_RESULTAT);
     }
 }

@@ -1,7 +1,8 @@
 package itu.etatfinance.services;
 
-import itu.etatfinance.models.PosteFille;
-import itu.etatfinance.repositories.PosteFilleRepository;
+import itu.etatfinance.model.PosteFille;
+import itu.etatfinance.repository.PosteFilleRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,11 @@ public class PosteFilleService {
     }
 
     public PosteFille createPosteFille(PosteFille posteFille) {
+        return posteFilleRepository.save(posteFille);
+    }
+
+    public PosteFille updatePosteFille(String id, PosteFille posteFille) {
+        posteFille.setIdPosteFille(id);
         return posteFilleRepository.save(posteFille);
     }
 

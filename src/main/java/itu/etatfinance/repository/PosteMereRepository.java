@@ -1,6 +1,6 @@
-package com.example.etatfinancier.repositories;
+package itu.etatfinance.repository;
 
-import com.example.etatfinancier.models.PosteMere;
+import itu.etatfinance.model.PosteMere;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

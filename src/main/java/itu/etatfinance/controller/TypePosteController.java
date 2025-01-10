@@ -1,6 +1,6 @@
-package itu.etatfinance.controllers;
+package itu.etatfinance.controller;
 
-import itu.etatfinance.models.TypePoste;
+import itu.etatfinance.model.TypePoste;
 import itu.etatfinance.services.TypePosteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

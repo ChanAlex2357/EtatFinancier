@@ -1,5 +1,6 @@
 package itu.etatfinance.services;
 
+import itu.etatfinance.model.PosteFille;
 import itu.etatfinance.model.PosteMere;
 import itu.etatfinance.repository.PosteMereRepository;
 
@@ -13,6 +14,9 @@ public class PosteMereService {
 
     @Autowired
     private PosteMereRepository posteMereRepository;
+
+    @Autowired
+    private PosteFilleService posteFilleService;
 
     public PosteMere createPosteMere(PosteMere posteMere) {
         return posteMereRepository.save(posteMere);
@@ -33,5 +37,12 @@ public class PosteMereService {
 
     public List<PosteMere> getAllPosteMeres() {
         return posteMereRepository.findAll();
+    }
+
+    public List<PosteFille> getPosteFilles(PosteMere posteMere){
+        return getPosteFilles(posteMere.getIdPosteMere());
+    }
+    public List<PosteFille> getPosteFilles(String idPosteMere){
+        return posteFilleService.getPosteFilleByPosteMere(idPosteMere);
     }
 }

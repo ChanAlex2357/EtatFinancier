@@ -20,4 +20,5 @@
         [x] TypePoste
     [x] fonction PosteFilleService.getPosteFilleByPosteMere ( PosteMere )
     [x] fonction PosteMere.getPosteFille( PosteMere )
-    [ ] fonction getPosteMereByTypePoste(TypePosteMere)
+    [x] fonction getPosteMereByTypePoste(TypePosteMere)
+    [x] fonction getPosteMeres( TypePoste)

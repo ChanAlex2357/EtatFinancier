@@ -1,4 +1,4 @@
-package itu.etatfinance.model;
+package itu.etatfinance.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

@@ -1,12 +1,12 @@
-package itu.etatfinance.repository;
+package itu.etatfinance.repositories;
     
-
-import itu.etatfinance.model.PosteFille;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import itu.etatfinance.models.PosteFille;
 
 @Repository
 public interface PosteFilleRepository extends JpaRepository<PosteFille, String> {

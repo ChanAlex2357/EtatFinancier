@@ -8,7 +8,7 @@
 [x] cree un script pour reinitialiser la base de donnee
 [ ] Base de donnee
     [x] generer donnee pour typePoste
-    [x] generer donnee pour PosteMere
+    [ ] generer donnee pour PosteMere
     [ ] generer donnee pour PosteFille
 
 ## Bilan Formulaire

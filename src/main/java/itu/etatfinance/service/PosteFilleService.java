@@ -14,10 +14,6 @@ public class PosteFilleService {
     @Autowired
     private PosteFilleRepository posteFilleRepository;
 
-    public List<PosteFille> getPosteFilleByPosteMere(String idPosteMere) {
-        return posteFilleRepository.findByIdPosteMere(idPosteMere);
-    }
-
     public PosteFille createPosteFille(PosteFille posteFille) {
         return posteFilleRepository.save(posteFille);
     }

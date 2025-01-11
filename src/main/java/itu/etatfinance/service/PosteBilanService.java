@@ -32,13 +32,13 @@ public class PosteBilanService {
     }
     
     private void setPosteMeres(PosteBilan posteBilan){
-        List<PosteMere> posteMeres = typePosteService.getPosteMeres(posteBilan.getTypePoste());
+        List<PosteMere> posteMeres = posteBilan.getTypePoste().getPosteMeres();
         posteBilan.setPosteMeres(posteMeres);
     }
     private void setPosteFilles(PosteBilan posteBilan) {
         List<PosteFille> posteFilles = new ArrayList<>();
         for(PosteMere posteMere : posteBilan.getPosteMeres()){
-            posteFilles.addAll( posteMereService.getPosteFilles(posteMere));
+            posteFilles.addAll( posteMere.getPosteFilles());
         }
         posteBilan.setPosteFilles(posteFilles);
     }

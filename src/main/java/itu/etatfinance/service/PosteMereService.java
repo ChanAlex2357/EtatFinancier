@@ -14,10 +14,6 @@ public class PosteMereService {
 
     @Autowired
     private PosteMereRepository posteMereRepository;
-
-    @Autowired
-    private PosteFilleService posteFilleService;
-
     public PosteMere createPosteMere(PosteMere posteMere) {
         return posteMereRepository.save(posteMere);
     }
@@ -37,16 +33,5 @@ public class PosteMereService {
 
     public List<PosteMere> getAllPosteMeres() {
         return posteMereRepository.findAll();
-    }
-
-    public List<PosteFille> getPosteFilles(PosteMere posteMere){
-        return getPosteFilles(posteMere.getIdPosteMere());
-    }
-    public List<PosteFille> getPosteFilles(String idPosteMere){
-        return posteFilleService.getPosteFilleByPosteMere(idPosteMere);
-    }
-
-    public List<PosteMere> getPosteMeresByTypePoste(String idTypePoste){
-        return posteMereRepository.findByTypePoste(idTypePoste);
     }
 }

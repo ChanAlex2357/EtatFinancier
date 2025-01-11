@@ -15,10 +15,6 @@ public class TypePosteService {
 
     @Autowired
     private TypePosteRepository typePosteRepository;
-
-    @Autowired
-    private PosteMereService posteMereService;
-
     public TypePoste createTypePoste(TypePoste typePoste) {
         return typePosteRepository.save(typePoste);
     }
@@ -38,13 +34,6 @@ public class TypePosteService {
 
     public List<TypePoste> getAllTypePostes() {
         return typePosteRepository.findAll();
-    }
-
-    public List<PosteMere> getPosteMeres(String idTypePoste){
-        return posteMereService.getPosteMeresByTypePoste(idTypePoste);
-    }
-    public List<PosteMere> getPosteMeres(TypePoste typePoste){
-        return getPosteMeres(typePoste.getIdTypePoste());
     }
 
     public TypePoste getTypePosteActif(){

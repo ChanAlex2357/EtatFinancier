@@ -10,5 +10,4 @@ import itu.etatfinance.model.PosteFille;
 
 @Repository
 public interface PosteFilleRepository extends JpaRepository<PosteFille, String> {
-    List<PosteFille> findByIdPosteMere(String idPosteMere);
 }

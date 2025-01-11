@@ -3,6 +3,7 @@ package itu.etatfinance.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 
 @Entity
@@ -16,4 +17,7 @@ public class PosteFille {
     private int compte;
     private int classe;
     private String idPosteMere;
+
+    @ManyToOne
+    private PosteMere posteMere;
 }

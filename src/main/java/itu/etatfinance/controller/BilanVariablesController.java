@@ -15,7 +15,7 @@ import itu.etatfinance.util.ResponseUtil;
 
 
 @RestController
-@RequestMapping("/api/bilan/")
+@RequestMapping("/api/bilanvariables")
 public class BilanVariablesController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class BilanVariablesController {
     @Autowired
     TypePosteService typePosteService;
 
-    @GetMapping("/variables")
+    @GetMapping
     @ResponseBody
     public Map<String, Object> bilanVariables() {
         try {

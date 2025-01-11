@@ -36,8 +36,10 @@ CREATE TABLE poste_fille(
    nom VARCHAR(255)  NOT NULL,
    compte INTEGER NOT NULL,
    classe INTEGER NOT NULL,
+   id_fille_mere VARCHAR(255) ,
    id_poste_mere VARCHAR(255)  NOT NULL,
    PRIMARY KEY(id_poste_fille),
+   FOREIGN KEY(id_fille_mere) REFERENCES poste_fille(id_poste_fille),
    FOREIGN KEY(id_poste_mere) REFERENCES poste_mere(id_poste_mere)
 );
 

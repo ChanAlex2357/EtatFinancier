@@ -4,22 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import itu.etatfinance.model.AdminBilanVariable;
-import itu.etatfinance.model.PosteBilanVariable;
-import itu.etatfinance.model.TypePoste;
 import itu.etatfinance.service.PosteBilanVariableService;
 import itu.etatfinance.service.TypePosteService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import java.util.List;
 import java.util.Map;
 import itu.etatfinance.util.ResponseUtil;
 
 
 @RestController
 @RequestMapping("/api/bilan/")
-public class PosteBilanController {
+public class BilanVariablesController {
 
     @Autowired
     PosteBilanVariableService posteBilanService;

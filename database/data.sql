@@ -1,3 +1,3 @@
-INSERT INTO TypePoste (val) VALUES ('Actif');
-INSERT INTO TypePoste (val) VALUES ('Passif et capitaux propres');
-INSERT INTO TypePoste (val) VALUES ('Resultat');
+INSERT INTO type_poste (val) VALUES ('Actif');
+INSERT INTO type_poste (val) VALUES ('Passif et capitaux propres');
+INSERT INTO type_poste (val) VALUES ('Resultat');

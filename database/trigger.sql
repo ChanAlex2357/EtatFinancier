@@ -8,7 +8,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_type_poste
-BEFORE INSERT ON TypePoste
+BEFORE INSERT ON type_poste
 FOR EACH ROW
 EXECUTE FUNCTION set_type_poste_id();
 
@@ -22,7 +22,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_bilan
-BEFORE INSERT ON Bilan
+BEFORE INSERT ON bilan
 FOR EACH ROW
 EXECUTE FUNCTION set_bilan_id();
 
@@ -36,7 +36,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_poste_mere
-BEFORE INSERT ON PosteMere
+BEFORE INSERT ON poste_mere
 FOR EACH ROW
 EXECUTE FUNCTION set_poste_mere_id();
 
@@ -50,7 +50,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_poste_bilan
-BEFORE INSERT ON PosteBilan
+BEFORE INSERT ON poste_bilan
 FOR EACH ROW
 EXECUTE FUNCTION set_poste_bilan_id();
 
@@ -64,7 +64,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_poste_fille
-BEFORE INSERT ON PosteFille
+BEFORE INSERT ON poste_fille
 FOR EACH ROW
 EXECUTE FUNCTION set_poste_fille_id();
 
@@ -78,6 +78,6 @@ END;
 $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_insert_poste_bilan_details
-BEFORE INSERT ON PosteBilanDetails
+BEFORE INSERT ON poste_bilan_details
 FOR EACH ROW
 EXECUTE FUNCTION set_poste_bilan_details_id();

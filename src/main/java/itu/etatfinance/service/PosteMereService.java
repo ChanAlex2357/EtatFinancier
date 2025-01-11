@@ -1,6 +1,5 @@
 package itu.etatfinance.service;
 
-import itu.etatfinance.model.PosteFille;
 import itu.etatfinance.model.PosteMere;
 import itu.etatfinance.repository.PosteMereRepository;
 

@@ -5,12 +5,12 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class PosteBilan {
+public class PosteBilanVariable {
     private TypePoste typePoste;
     private List<PosteMere> posteMeres;
     private List<PosteFille> posteFilles;
 
-    public PosteBilan(TypePoste typePoste){
+    public PosteBilanVariable(TypePoste typePoste){
         setTypePoste(typePoste);
     }
 }

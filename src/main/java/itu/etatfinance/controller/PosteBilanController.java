@@ -3,27 +3,38 @@ package itu.etatfinance.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import itu.etatfinance.service.PosteBilanService;
+import itu.etatfinance.model.AdminBilanVariable;
+import itu.etatfinance.model.PosteBilanVariable;
+import itu.etatfinance.model.TypePoste;
+import itu.etatfinance.service.PosteBilanVariableService;
+import itu.etatfinance.service.TypePosteService;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import itu.etatfinance.util.ResponseUtil;
 
 
 @RestController
+@RequestMapping("/api/bilan/")
 public class PosteBilanController {
 
     @Autowired
-    PosteBilanService posteBilanService;
+    PosteBilanVariableService posteBilanService;
 
-    @GetMapping("/posteBilan")
+    @Autowired
+    TypePosteService typePosteService;
+
+    @GetMapping("/variables")
     @ResponseBody
-    public Map<String, String> posteBilan() {
-        Map<String, String> response = new HashMap<>();
-        response.put("status", "success");
-        return response;
+    public Map<String, Object> bilanVariables() {
+        try {
+            AdminBilanVariable adminBilanVariable = posteBilanService.loAdminBilanVariable();
+            return ResponseUtil.successResponse( "Variables de Bilan loaded successfully", adminBilanVariable);
+        } catch (Exception e) {
+            return ResponseUtil.errorResponse( e.getMessage(), null,e);
+        }
     }
-    
-    
 }

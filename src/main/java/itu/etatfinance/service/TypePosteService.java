@@ -1,7 +1,6 @@
 package itu.etatfinance.service;
 
 import itu.etatfinance.constant.TypePosteConstante;
-import itu.etatfinance.model.PosteMere;
 import itu.etatfinance.model.TypePoste;
 import itu.etatfinance.repository.TypePosteRepository;
 
@@ -29,6 +28,7 @@ public class TypePosteService {
     }
 
     public TypePoste getTypePosteById(String id) {
+        System.out.println("ID TYPE POSTE : "+id);
         return typePosteRepository.findById(id).orElse(null);
     }
 

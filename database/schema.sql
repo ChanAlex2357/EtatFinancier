@@ -13,6 +13,33 @@ CREATE TABLE bilan(
    PRIMARY KEY(id_bilan)
 );
 
+CREATE TABLE categorie_etat_finance(
+   id_categorie_etat_finance VARCHAR(255) ,
+   titre VARCHAR(255)  NOT NULL,
+   desce VARCHAR(255) ,
+   PRIMARY KEY(id_categorie_etat_finance)
+);
+
+CREATE TABLE poste_etat(
+   id_categorie_etat_finance VARCHAR(255) ,
+   id_poste_etat VARCHAR(255) ,
+   nom VARCHAR(255)  NOT NULL,
+   desce VARCHAR(255) ,
+   PRIMARY KEY(id_categorie_etat_finance, id_poste_etat),
+   FOREIGN KEY(id_categorie_etat_finance) REFERENCES categorie_etat_finance(id_categorie_etat_finance)
+);
+
+CREATE TABLE etat_finance(
+   id_etat_finance VARCHAR(255) ,
+   taux NUMERIC(15,2)  ,
+   id_bilan VARCHAR(255)  NOT NULL,
+   id_categorie_etat_finance VARCHAR(255)  NOT NULL,
+   id_poste_etat VARCHAR(255)  NOT NULL,
+   PRIMARY KEY(id_etat_finance),
+   FOREIGN KEY(id_bilan) REFERENCES bilan(id_bilan),
+   FOREIGN KEY(id_categorie_etat_finance, id_poste_etat) REFERENCES poste_etat(id_categorie_etat_finance, id_poste_etat)
+);
+
 CREATE TABLE poste_mere(
    id_poste_mere VARCHAR(255) ,
    nom VARCHAR(255)  NOT NULL,
